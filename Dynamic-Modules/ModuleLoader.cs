@@ -5,17 +5,31 @@ namespace Dynamic_Modules;
 
 public class ModuleLoader
 {
+    /// <summary>
+    /// Backing list to hold all currently loaded modules
+    /// </summary>
     private List<IModule> _modules;
 
+    /// <summary>
+    /// Gets the currently loaded modules as an array
+    /// </summary>
     public IModule[] Modules => _modules.ToArray();
+
+    #region Constructors
 
     public ModuleLoader(List<IModule> modules)
     {
         _modules = modules;
     }
 
+    /// <summary>
+    /// default constructor
+    /// </summary>
     public ModuleLoader() => _modules = new List<IModule>();
 
+    #endregion
+
+    #region Methods
 
     /// <summary>
     /// Loads all modules in the provided directory
@@ -58,4 +72,6 @@ public class ModuleLoader
             if (Activator.CreateInstance(types[0]) is IModule module) _modules.Add(module);
         }
     }
+
+    #endregion
 }
