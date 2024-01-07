@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>Dynamic_Modules</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="PresentationCore">
+        <HintPath>lib\PresentationCore.dll</HintPath>
+      </Reference>
+      <Reference Include="PresentationFramework">
+        <HintPath>lib\PresentationFramework.dll</HintPath>
+      </Reference>
+      <Reference Include="WindowsBase">
+        <HintPath>lib\WindowsBase.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="lib\PresentationCore.dll" />
+      <Resource Include="lib\PresentationCore.dll">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="lib\PresentationFramework.dll" />
+      <Resource Include="lib\PresentationFramework.dll" />
+      <None Remove="lib\WindowsBase.dll" />
+      <Resource Include="lib\WindowsBase.dll" />
+    </ItemGroup>
+
+</Project>
