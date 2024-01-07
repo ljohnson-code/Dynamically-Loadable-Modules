@@ -5,6 +5,11 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <TargetFramework>net8.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Dynamic Modules</Title>
+        <Description>A library for creating runtime loadble modules for WPF</Description>
+        <Copyright>Luke Johnson</Copyright>
+        <RepositoryUrl>https://github.com/ljohnson-code/Dynamically-Loadable-Modules</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
